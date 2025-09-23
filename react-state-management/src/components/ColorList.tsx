@@ -1,27 +1,22 @@
-import { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 
 import Star from "./Star";
 
+import useColors from "../hooks/useColors";
 import type { ColorType } from "../types/type";
 
 interface ColorListProps {
   color: ColorType;
-  onClick: () => void;
 }
 
-const ColorList = ({ color, onClick }: ColorListProps) => {
-  const [rating, setRating] = useState(color.rating);
-
-  const handleClickStar = (idx: number) => {
-    setRating(idx + 1);
-  };
+const ColorList = ({ color }: ColorListProps) => {
+  const { rateColor, deleteColor } = useColors();
 
   return (
     <>
       <h1>{color.title}</h1>
 
-      <button onClick={onClick}>
+      <button onClick={() => deleteColor(color.id)}>
         <FaTrash />
       </button>
       <div style={{ height: "40px", backgroundColor: color.color }} />
@@ -29,11 +24,11 @@ const ColorList = ({ color, onClick }: ColorListProps) => {
       {Array.from({ length: 5 }, (_, i) => (
         <Star
           key={i}
-          isSelected={i < rating}
-          onClick={() => handleClickStar(i)}
+          isSelected={i < color.rating}
+          onClick={() => rateColor(color.id, i + 1)}
         />
       ))}
-      <div>{rating}/5</div>
+      <div>{color.rating}/5</div>
     </>
   );
 };

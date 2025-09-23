@@ -1,14 +1,12 @@
 import { useRef } from "react";
 
-import type { newColorType } from "../types/type";
+import useColors from "../hooks/useColors";
 
-interface AddFormProps {
-  addColor: (colorData: newColorType) => void;
-}
-
-const AddForm = ({ addColor }: AddFormProps) => {
+const AddForm = () => {
   const textRef = useRef<HTMLInputElement>(null);
   const colorRef = useRef<HTMLInputElement>(null);
+
+  const { addColor } = useColors();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
