@@ -1,17 +1,22 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import colorData from './data/color-data.json'
+import colorData from './data/color-data.json';
 import ColorList from './components/ColorList';
-import StarRating from './components/StarRating'
 
 function App() {
-  const [colors] = useState(colorData);
+  const [colors, setColors] = useState(colorData.colors);
   
   return (
     <>
-      <ColorList colors={colors.colors}/>
+      <ColorList 
+        colors={colors} 
+        onRemoveColor={id => {
+          const newColors = colors.filter(color => color.id !== id);
+          setColors(newColors);
+        }}
+      />
     </>
-  )
-}
+  );
+};
 
 export default App
