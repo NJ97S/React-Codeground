@@ -1,0 +1,28 @@
+{
+  "colors": [
+    {
+      "id": "b12f9c8d-1234-4f0a-9a8c-7e5a2d9b8c11",
+      "title": "맑은 하늘",
+      "color": "#87ceeb",
+      "rating": 4
+    },
+    {
+      "id": "c45e8d7a-5678-4c9b-8d3e-1a9b2c3d4e56",
+      "title": "봄 잎새",
+      "color": "#32cd32",
+      "rating": 2
+    },
+    {
+      "id": "d78a6f4b-9101-4f2d-9b4c-5e6f7a8b9c01",
+      "title": "은은한 보라",
+      "color": "#9370db",
+      "rating": 5
+    },
+    {
+      "id": "e23b5c9d-2345-4b8a-9e7d-2f3a4b5c6d78",
+      "title": "햇살 노랑",
+      "color": "#ffd700",
+      "rating": 1
+    }
+  ]
+}
