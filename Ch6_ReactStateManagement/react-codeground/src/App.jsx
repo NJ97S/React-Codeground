@@ -6,10 +6,10 @@ import StarRating from './components/StarRating'
 
 function App() {
   const [colors] = useState(colorData);
-
+  
   return (
     <>
-      <ColorList/>
+      <ColorList color={colors.colors}/>
       <StarRating
         style={{background: "pink"}}S
         totalStars={9}

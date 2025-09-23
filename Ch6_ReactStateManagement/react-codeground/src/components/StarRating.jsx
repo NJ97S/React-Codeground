@@ -7,8 +7,8 @@ const Star = ({selected = false, onSelect = () => {} }) => (
 
 const createArray = (totalStars) => [...Array(totalStars)];
 
-export default function StarRating({ style = { background: "lightgrey" }, totalStars = 5, ...props}) {
-    const [selectedStars, setSelectedStars] = useState(3);
+export default function StarRating({ style = { background: "lightgrey" }, totalStars = 5, selectedStar = 0, ...props}) {
+    const [selectedStars, setSelectedStars] = useState(selectedStar);
     
     return (
         <div style={{ padding: "5px", ...style}} {...props}>
