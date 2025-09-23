@@ -9,12 +9,7 @@ function App() {
   
   return (
     <>
-      <ColorList color={colors.colors}/>
-      <StarRating
-        style={{background: "pink"}}S
-        totalStars={9}
-        onDoubleClick={e => alert("double click!!")}
-      />
+      <ColorList colors={colors.colors}/>
     </>
   )
 }
