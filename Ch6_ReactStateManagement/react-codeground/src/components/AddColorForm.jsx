@@ -8,10 +8,10 @@ export default function AddColorForm({onNewColor = () => {}}) {
         // 디폴트 동작인 현재 URL로 폼 엘리먼트에 저장된 값이 본문에 들어 있는 POST 요청을 보내는 것을 막기 위함.
         e.preventDefault();
 
-        onNewColor(title, color);
+        onNewColor(titleProps.value, colorProps.value);
         
-        resetTitle("");
-        resetColor("#000000");
+        resetTitle();
+        resetColor();
     };
 
     return (
