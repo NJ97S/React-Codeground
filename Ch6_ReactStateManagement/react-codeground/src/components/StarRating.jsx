@@ -1,9 +1,8 @@
-import { FaStar } from "react-icons/fa"
-import { useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 const Star = ({selected = false, onSelect = () => {} }) => (
     <FaStar color={selected ? "yellow" : "grey"} onClick={onSelect}></FaStar>
-)
+);
 
 const createArray = (totalStars) => [...Array(totalStars)];
 
@@ -21,5 +20,5 @@ export default function StarRating({ style = { background: "lightgrey" }, totalS
                 {selectedStars} of {totalStars} stars
             </p>
         </div>
-    )
+    );
 };
