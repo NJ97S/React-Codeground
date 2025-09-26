@@ -1,10 +1,7 @@
-import { useContext } from "react";
-
 import useInput from "../hooks/useInput";
-import { ColorContext } from "../provider/ColorProvider";
 
 export default function AddColorForm() {
-    const { addColor } = useContext(ColorContext);
+    const { addColor } = useColors();
 
     const [titleProps, resetTitle] = useInput("");
     const [colorProps, resetColor] = useInput("#000000");

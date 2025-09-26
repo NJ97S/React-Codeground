@@ -1,11 +1,9 @@
-import { useContext } from "react";
 import { FaTrash } from "react-icons/fa";
 
 import StarRating from "./StarRating";
-import { ColorContext } from "../provider/ColorProvider";
 
 export default function Color({ id, title, color, rating }) {
-    const { rateColor, removeColor } = useContext(ColorContext);
+    const { rateColor, removeColor } = useColors();
 
     return (
         <section>

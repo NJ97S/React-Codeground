@@ -1,10 +1,7 @@
-import { useContext } from "react";
-
 import Color from "./Color";
-import { ColorContext } from "../provider/ColorProvider";
 
 export default function ColorList() {
-    const { colors } = useContext(ColorContext)
+    const { colors } = useColors();
 
     if(!colors.length) return <div>표시할 색이 없습니다.</div>;
 
