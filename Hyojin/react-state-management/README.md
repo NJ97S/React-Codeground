@@ -16,9 +16,3 @@ React-Codeground 실습에서 사용할 간단한 `Git Commit` 컨벤션
 | 🎨     | style      | 코드 스타일 변경 (기능 영향 없음)    | `🎨 style: ESLint 규칙 적용`      |
 | ♻️     | refactor   | 코드 리팩토링 (동작 동일, 구조 개선) | `♻️ refactor: 중복 코드 함수화`   |
 | 🔧     | chore      | 설정/빌드/라이브러리 설치 등         | `🔧 chore: react-router-dom 설치` |
-
----
-
-## 📌 커밋 메시지 템플릿
-
-아래와 같이 **한 줄 요약** + **이유/의도**를 함께 작성하는 것을 권장합니다.
