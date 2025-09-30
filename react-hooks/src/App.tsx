@@ -1,7 +1,9 @@
+import Checkbox from "./components/Checkbox";
+
 function App() {
   return (
     <>
-      <div>test</div>
+      <Checkbox />
     </>
   );
 }
