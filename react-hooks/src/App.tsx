@@ -10,6 +10,12 @@ function App() {
   };
 
   useEffect(() => {
+    console.log("welcome");
+
+    return () => console.log("bye");
+  }, []);
+
+  useEffect(() => {
     console.log(`typing "${val}"`);
   }, [val]);
 
