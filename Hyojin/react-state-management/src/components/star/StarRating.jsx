@@ -1,24 +1,16 @@
-import { useState } from "react";
-
 import Star from "./Star";
 
 export default function StarRating({
   totalStars = 5,
+  selectedStars = 0,
   style = {},
   onDoubleClick = () => console.warn("⚠️ onSelected handler not provided!"),
-  selectedStars = 0,
 }) {
-  const [_, setSelectedStars] = useState(0);
-
   return (
     <>
       <div style={{ padding: 10, ...style }} onDoubleClick={onDoubleClick}>
         {Array.from({ length: totalStars }, (_, i) => (
-          <Star
-            key={i}
-            selected={i < selectedStars}
-            onSelected={() => setSelectedStars(i + 1)}
-          />
+          <Star key={i} selected={i < selectedStars} />
         ))}
         <p>
           {selectedStars} / {totalStars}
