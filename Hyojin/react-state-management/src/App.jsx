@@ -5,7 +5,10 @@ function App() {
   return (
     <>
       <h1>React-state-management</h1>
-      <StarRating style={{ backgroundColor: "lightgrey" }} />
+      <StarRating
+        style={{ backgroundColor: "lightgrey" }}
+        onDoubleClick={() => alert("Double Click")}
+      />
     </>
   );
 }
