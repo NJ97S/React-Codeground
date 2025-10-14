@@ -11,7 +11,7 @@ export default function StarRating({
 
   return (
     <>
-      <div style={style} onDoubleClick={onDoubleClick}>
+      <div style={{ padding: 10, ...style }} onDoubleClick={onDoubleClick}>
         {Array.from({ length: totalStars }, (_, i) => (
           <Star
             key={i}
