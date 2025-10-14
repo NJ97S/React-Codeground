@@ -6,8 +6,9 @@ export default function StarRating({
   totalStars = 5,
   style = {},
   onDoubleClick = () => console.warn("⚠️ onSelected handler not provided!"),
+  selectedStars = 0,
 }) {
-  const [selectedStars, setSelectedStars] = useState(0);
+  const [_, setSelectedStars] = useState(0);
 
   return (
     <>

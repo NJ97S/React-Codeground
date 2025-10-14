@@ -1,14 +1,15 @@
+import { useState } from "react";
+
 import "./App.css";
-import StarRating from "./components/star/StarRating";
+import colorData from "./data/color-data.json";
+import ColorInfoList from "./components/color/ColorInfoList";
 
 function App() {
+  const [colors] = useState(colorData.colors);
   return (
     <>
       <h1>React-state-management</h1>
-      <StarRating
-        style={{ backgroundColor: "lightgrey" }}
-        onDoubleClick={() => alert("Double Click")}
-      />
+      <ColorInfoList colors={colors} />
     </>
   );
 }
