@@ -15,6 +15,12 @@ function App() {
           const newColors = colors.filter((color) => color.id !== id);
           setColors(newColors);
         }}
+        onRateColor={(id, rating) => {
+          const newRatingColor = colors.map((color) =>
+            color.id === id ? { ...color, rating } : color
+          );
+          setColors(newRatingColor);
+        }}
       />
     </>
   );

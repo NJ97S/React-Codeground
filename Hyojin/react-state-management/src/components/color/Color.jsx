@@ -8,6 +8,7 @@ export default function Color({
   fillColor,
   colorRating,
   onRemove = (f) => f,
+  onRate = (f) => f,
 }) {
   return (
     <section>
@@ -16,7 +17,10 @@ export default function Color({
         <FaTrash />
       </button>
       <div style={{ height: 50, backgroundColor: fillColor }}></div>
-      <StarRating selectedStars={colorRating} />
+      <StarRating
+        selectedStars={colorRating}
+        onRate={(colorRating) => onRate(colorId, colorRating)}
+      />
     </section>
   );
 }

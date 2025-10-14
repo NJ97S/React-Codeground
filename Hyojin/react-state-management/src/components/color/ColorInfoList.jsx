@@ -3,6 +3,7 @@ import Color from "./Color";
 export default function ColorInfoList({
   colors = [],
   onRemoveColor = (f) => f,
+  onRateColor = (f) => f,
 }) {
   if (!colors.length) return <div>표시할 색상이 없습니다.</div>;
   return (
@@ -15,6 +16,7 @@ export default function ColorInfoList({
           fillColor={color.color}
           colorRating={color.rating}
           onRemove={onRemoveColor}
+          onRate={onRateColor}
         />
       ))}
     </div>
