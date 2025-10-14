@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <h1>React-state-management</h1>
-      <StarRating />
+      <StarRating style={{ backgroundColor: "lightgrey" }} />
     </>
   );
 }
