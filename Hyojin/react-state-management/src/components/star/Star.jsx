@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
 
 export default function Star({ selected = false }) {
-  return <FaStar color={selected} />;
+  return <FaStar color={selected ? "green" : "grey"} />;
 }
