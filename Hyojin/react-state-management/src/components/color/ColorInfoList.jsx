@@ -1,7 +1,7 @@
 import { useContext } from "react";
-
-import { ColorContext } from "../../main";
 import Color from "./Color";
+
+import { ColorContext } from "../../providers/ColorProvider";
 
 export default function ColorInfoList({
   onRemoveColor = (f) => f,
